@@ -18,9 +18,13 @@
 				"editor.formatOnSave": true,
 				"javascript.format.enable": false,
 				"json.format.enable": false,
+				"npm.packageManager": "npm",
 				"typescript.format.enable": false
 			}
 		}
+	},
+	"postCreateCommand": {
+		"build": "npm i"
 	},
 	"remoteUser": "node"
 }
