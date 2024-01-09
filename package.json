@@ -1,31 +1,16 @@
 {
-	"name": "my-app",
-	"version": "0.1.0",
+	"name": "@repo/root",
 	"private": true,
 	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"lint": "biome check src && next lint"
-	},
-	"dependencies": {
-		"next": "^14.0.4",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"build": "turbo build",
+		"dev": "turbo dev",
+		"lint": "turbo lint"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.4.1",
-		"@types/node": "^20.10.6",
-		"@types/react": "^18.2.46",
-		"@types/react-dom": "^18.2.18",
 		"@vercel/git-hooks": "^1.0.0",
-		"eslint": "^8.56.0",
-		"eslint-config-next": "^14.0.4",
-		"typescript": "^5.3.3"
+		"turbo": "^1.11.3"
 	},
-	"eslintConfig": {
-		"extends": "next/core-web-vitals"
-	},
+	"workspaces": ["apps/*", "packages/*"],
 	"git": {
 		"pre-commit": "lint"
 	}
